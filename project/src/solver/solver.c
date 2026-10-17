@@ -6,7 +6,7 @@
 /*   By: fernfern <fernfern@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 18:24:46 by jcortes           #+#    #+#             */
-/*   Updated: 2026/10/16 14:13:55 by fernfern         ###   ########.fr       */
+/*   Updated: 2026/10/17 20:40:19 by fernfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,6 @@ void	do_operation(char *op, t_state *state)
 		bench_record(state->bench, operation);
 }
 
-void	solve_medium(t_state *state, int size, int in_stack_a)
-{
-	// SOLUCION DUMMY PROVISIONAL
-	bubble_sort(state, size, in_stack_a);
-}
-
 void	solve_sorting(t_state *state, t_config *config)
 {
 	if (config->size <= 1)
@@ -40,7 +34,7 @@ void	solve_sorting(t_state *state, t_config *config)
 	if (config->strategy == STRAT_SIMPLE)
 		return (bubble_sort(state, config->size, 1));
 	if (config->strategy == STRAT_MEDIUM)
-		return (solve_medium(state, config->size, 1));
+		return (chunk_sort(state, config));
 	if (config->strategy == STRAT_COMPLEX)
 		return (merge_sort(state, config->size, 1));
 }
