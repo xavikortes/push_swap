@@ -6,7 +6,7 @@
 /*   By: fernfern <fernfern@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 17:56:59 by jcortes           #+#    #+#             */
-/*   Updated: 2026/10/17 20:37:47 by fernfern         ###   ########.fr       */
+/*   Updated: 2026/10/19 13:05:51 by fernfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	solve_sorting(t_state *state, t_config *config);
 void	solve_two(t_state *state);
 void	solve_three(t_state *state);
 
-void	bubble_sort(t_state *state, int size, int in_stack_a);
+void	bubble_sort(t_state *state, int size);
 void	chunk_sort(t_state *state, t_config *config);
 void	merge_sort(t_state *state, int size, int in_stack_a);
 

@@ -6,7 +6,7 @@
 /*   By: fernfern <fernfern@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 16:17:11 by fernfern          #+#    #+#             */
-/*   Updated: 2026/10/15 14:51:58 by fernfern         ###   ########.fr       */
+/*   Updated: 2026/10/19 13:40:37 by fernfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ static int	count_args(char *arg, t_config *config, int *count, int allow_flags)
 	return (1);
 }
 
-/* Fill with malloc in array with numbers*/
+/* Fill preallocated array with validated numbers */
 static int	fill_arg(char *arg, t_config *config)
 {
 	char	**tokens;

@@ -6,7 +6,7 @@
 /*   By: fernfern <fernfern@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 18:36:59 by jcortes           #+#    #+#             */
-/*   Updated: 2026/10/16 11:56:05 by fernfern         ###   ########.fr       */
+/*   Updated: 2026/10/19 13:11:33 by fernfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,11 @@ void	swap_values(t_state *state)
 	do_operation("pb\n", state);
 }
 
-void	bubble_sort(t_state *state, int size, int in_stack_a)
+void	bubble_sort(t_state *state, int size)
 {
 	int	n;
 	int	i;
 
-	(void) in_stack_a;
 	n = size;
 	while (n > 1)
 	{

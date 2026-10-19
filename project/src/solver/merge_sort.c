@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   merge_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcortes <jcortes@student.42madrid.com>     +#+  +:+       +#+        */
+/*   By: fernfern <fernfern@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 10:04:59 by jcortes           #+#    #+#             */
-/*   Updated: 2026/10/16 14:16:42 by jcortes          ###   ########.fr       */
+/*   Updated: 2026/10/19 12:50:28 by fernfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,22 +57,6 @@ static void	merge(t_state *state, int this_size, int other_size, int in_stack_a)
 				do_operation("rb\n", state);
 			reverse_count++;
 		}
-		/*while (other_size > 0 && *((int *) state->a->content) > *((int *) state->b->content))
-		{
-			if (in_stack_a)
-				do_operation("pa\n", state);
-			else
-				do_operation("pb\n", state);
-			other_size--;
-		}
-		while (other_size > 0 && reverse_count == this_size)
-		{
-			if (in_stack_a)
-				do_operation("pa\n", state);
-			else
-				do_operation("pb\n", state);
-			other_size--;
-		}*/
 		if (in_stack_a)
 			do_operation("pa\n", state);
 		else
