@@ -6,7 +6,7 @@
 /*   By: fernfern <fernfern@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 16:27:47 by fernfern          #+#    #+#             */
-/*   Updated: 2026/10/19 13:01:00 by fernfern         ###   ########.fr       */
+/*   Updated: 2026/10/20 15:20:20 by fernfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,15 @@ static int	calculate_size_chunk(int size)
 {
 	int	chunk;
 
+	if (size <= 5)
+		return (size);
 	chunk = (size * 5) / 100 + 10;
 	if (chunk > 35)
 		chunk = 35;
 	if (chunk < 5)
 		chunk = 5;
+	if (chunk > size)
+		chunk = size;
 	return (chunk);
 }
 

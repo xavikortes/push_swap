@@ -27,7 +27,7 @@ SRC =   src/analyzer/analyzer \
 		src/solver/bubble_sort \
 		src/solver/chunk_sort \
 		src/solver/chunk_utils \
-		src/solver/merge_sort \
+		src/solver/turk_sort \
 		src/bench/bench
 
 SRCS = $(addsuffix .c, $(SRC))

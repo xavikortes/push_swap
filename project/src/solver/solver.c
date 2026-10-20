@@ -6,7 +6,7 @@
 /*   By: fernfern <fernfern@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 18:24:46 by jcortes           #+#    #+#             */
-/*   Updated: 2026/10/19 13:06:31 by fernfern         ###   ########.fr       */
+/*   Updated: 2026/10/20 14:49:50 by fernfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ void	solve_sorting(t_state *state, t_config *config)
 	if (config->strategy == STRAT_MEDIUM)
 		return (chunk_sort(state, config));
 	if (config->strategy == STRAT_COMPLEX)
-		return (merge_sort(state, config->size, 1));
+		return (turk_sort(state, config->size));
 }
