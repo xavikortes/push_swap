@@ -6,7 +6,7 @@
 /*   By: fernfern <fernfern@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 18:24:46 by jcortes           #+#    #+#             */
-/*   Updated: 2026/10/17 20:40:19 by fernfern         ###   ########.fr       */
+/*   Updated: 2026/10/20 14:49:50 by fernfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ void	solve_sorting(t_state *state, t_config *config)
 	if (config->size == 3)
 		return (solve_three(state));
 	if (config->strategy == STRAT_SIMPLE)
-		return (bubble_sort(state, config->size, 1));
+		return (bubble_sort(state, config->size));
 	if (config->strategy == STRAT_MEDIUM)
 		return (chunk_sort(state, config));
 	if (config->strategy == STRAT_COMPLEX)
-		return (merge_sort(state, config->size, 1));
+		return (turk_sort(state, config->size));
 }

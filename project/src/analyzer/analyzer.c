@@ -6,7 +6,7 @@
 /*   By: fernfern <fernfern@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 12:53:25 by fernfern          #+#    #+#             */
-/*   Updated: 2026/10/13 19:14:10 by fernfern         ###   ########.fr       */
+/*   Updated: 2026/10/19 13:33:24 by fernfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static void	set_metadata(t_strategy og_strat, t_strategy res_strat,
 	else
 		analysis->strategy_name = "Complex";
 	if (res_strat == STRAT_SIMPLE)
-		analysis->complexity = "O(n)";
+		analysis->complexity = "O(n^2)";
 	else if (res_strat == STRAT_MEDIUM)
 		analysis->complexity = "O(n√n)";
 	else

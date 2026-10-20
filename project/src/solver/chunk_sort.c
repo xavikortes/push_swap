@@ -6,7 +6,7 @@
 /*   By: fernfern <fernfern@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 16:27:47 by fernfern          #+#    #+#             */
-/*   Updated: 2026/10/17 20:52:37 by fernfern         ###   ########.fr       */
+/*   Updated: 2026/10/20 15:20:20 by fernfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,15 @@ static int	calculate_size_chunk(int size)
 {
 	int	chunk;
 
+	if (size <= 5)
+		return (size);
 	chunk = (size * 5) / 100 + 10;
 	if (chunk > 35)
 		chunk = 35;
 	if (chunk < 5)
 		chunk = 5;
+	if (chunk > size)
+		chunk = size;
 	return (chunk);
 }
 
@@ -31,17 +35,13 @@ static void	push_chunks_to_b(t_state *state, int *sorted, int size)
 	int	size_chunk;
 	int	limit_sup;
 	int	num_top;
-	int	idx;
 
 	size_chunk = calculate_size_chunk(size);
 	limit_sup = size_chunk;
 	while (state->a)
 	{
 		num_top = *(int *)state->a->content;
-		idx = limit_sup - 1;
-		if (idx >= size)
-			idx = size - 1;
-		if (num_top <= sorted[idx])
+		if (num_top <= sorted[limit_sup - 1])
 		{
 			do_operation("pb\n", state);
 			if (num_top <= sorted[limit_sup - (size_chunk / 2)])

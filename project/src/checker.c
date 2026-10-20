@@ -6,7 +6,7 @@
 /*   By: fernfern <fernfern@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 13:58:09 by jcortes           #+#    #+#             */
-/*   Updated: 2026/10/15 15:11:00 by fernfern         ###   ########.fr       */
+/*   Updated: 2026/10/19 13:10:35 by fernfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,7 @@ int	main(int argc, char **argv)
 	if (argc == 1)
 		return (0);
 	nums = NULL;
-	state.a = NULL;
-	state.b = NULL;
+	ft_bzero(&state, sizeof(t_state));
 	if (!parsing_input(argc, argv, &config, 0))
 		return (soft_exit(&config, NULL, NULL, 1));
 	fill_state(config.numbers, config.size, &state);

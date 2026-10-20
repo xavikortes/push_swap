@@ -3,5 +3,6 @@
 *.o
 *.txt
 *.swp
+*.sh
 push_swap
 checker
