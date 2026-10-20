@@ -6,7 +6,7 @@
 /*   By: fernfern <fernfern@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 17:56:59 by jcortes           #+#    #+#             */
-/*   Updated: 2026/10/20 18:09:08 by fernfern         ###   ########.fr       */
+/*   Updated: 2026/10/20 20:06:49 by fernfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,17 @@ void	bubble_sort(t_state *state, int size);
 void	chunk_sort(t_state *state, t_config *config);
 void	quick_sort(t_state *state, int size);
 void	turk_sort(t_state *state, int size);
-//void	merge_sort(t_state *state, int size, int in_stack_a);
 
 /* chunk_utils.c */
 int		get_max_pos(t_list *stack);
 int		get_min_pos(t_list *stack);
 int		*get_sorted_copy(const int *numbers, int size);
 void	sync_rotations(t_state *state, int *best_b, int *target);
+
+/* turk_utils.c */
+void	rotate_to_top(t_state *state, int pos, int size, int in_stack_a);
+long	get_stack_average(t_list *state);
+int		get_target(t_list *a, int val);
+int		calc_dist(int pos, int size);
 
 #endif
