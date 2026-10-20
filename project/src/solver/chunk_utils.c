@@ -6,7 +6,7 @@
 /*   By: fernfern <fernfern@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 20:16:34 by fernfern          #+#    #+#             */
-/*   Updated: 2026/10/20 18:42:11 by fernfern         ###   ########.fr       */
+/*   Updated: 2026/10/20 20:08:11 by fernfern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,30 +37,6 @@ int	get_max_pos(t_list *stack)
 	return (max_pos);
 }
 
-int	get_min_pos(t_list *stack)
-{
-	int	min_val;
-	int	min_pos;
-	int	i;
-
-	if (!stack)
-		return (-1);
-	i = 0;
-	min_pos = 0;
-	min_val = *(int *)stack->content;
-	while (stack)
-	{
-		if (*(int *)stack->content < min_val)
-		{
-			min_val = *(int *)stack->content;
-			min_pos = i;
-		}
-		stack = stack->next;
-		i++;
-	}
-	return (min_pos);
-}
-
 /* Gets copy from config->numbers and return sorted array */
 int	*get_sorted_copy(const int *numbers, int size)
 {
@@ -88,6 +64,31 @@ int	*get_sorted_copy(const int *numbers, int size)
 		}
 	}
 	return (sorted);
+}
+
+/* Get minimum number position*/
+int	get_min_pos(t_list *stack)
+{
+	int	min_val;
+	int	min_pos;
+	int	i;
+
+	if (!stack)
+		return (-1);
+	i = 0;
+	min_pos = 0;
+	min_val = *(int *)stack->content;
+	while (stack)
+	{
+		if (*(int *)stack->content < min_val)
+		{
+			min_val = *(int *)stack->content;
+			min_pos = i;
+		}
+		stack = stack->next;
+		i++;
+	}
+	return (min_pos);
 }
 
 /* Aux function to sync rotations rr && rrr */
